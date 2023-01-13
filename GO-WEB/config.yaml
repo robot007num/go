@@ -1,0 +1,10 @@
+app:
+  name: "go-web"
+  version: "v1.0"
+
+mysql:
+  user: "root"
+  password: "root"
+  host: "localhost"
+  port: 3306
+  dbname: "go_web"

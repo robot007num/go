@@ -1,0 +1,96 @@
+{"level":"info","ts":"2023/01/12 16:34:34","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 16:34:34","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 16:35:18","msg":"/Register","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 16:40:12","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 16:40:12","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 16:42:32","msg":"[gin/Register]","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 16:50:16","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 16:50:16","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 16:50:30","msg":"[gin/Register]","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 16:50:51","msg":"[gin/Register]","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 17:05:21","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:05:21","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:05:26","msg":"[gin/Register]","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 17:05:47","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:05:47","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:05:52","msg":"[gin/Register]","status":"404","parameter":"错误"}
+{"level":"info","ts":"2023/01/12 17:17:33","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:17:33","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:23:05","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:23:05","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:24:11","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:24:11","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:25:51","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:25:51","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:31:58","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:31:58","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:36:38","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:36:38","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:38:17","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:38:17","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:40:40","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:40:40","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 17:44:32","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 17:44:32","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 18:45:42","caller":"main/main.go:25","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 18:45:42","caller":"main/main.go:26","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 18:46:13","caller":"main/main.go:25","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 18:46:13","caller":"main/main.go:26","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 18:46:28","caller":"controllers/controllers.go:56","msg":"[gin/Register]","Success:":"建立新用户成功"}
+{"level":"info","ts":"2023/01/12 19:30:42","caller":"main/main.go:25","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 19:30:42","caller":"main/main.go:26","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 19:30:46","caller":"controllers/controllers.go:14","msg":"[gin/Register]","error:":"参数错误"}
+{"level":"info","ts":"2023/01/12 20:27:19","caller":"main/main.go:25","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 20:27:19","caller":"main/main.go:26","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 20:27:28","caller":"utils/utils.go:11","msg":"[gin/Register]","error:":"参数错误"}
+{"level":"info","ts":"2023/01/12 20:27:59","caller":"controllers/controllers.go:58","msg":"[gin/Register]","status:":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 20:31:09","caller":"controllers/controllers.go:58","msg":"[gin/Register]","status:":"注册成功"}
+{"level":"info","ts":"2023/01/12 20:44:25","caller":"main/main.go:25","msg":"InitAll","status":"success"}
+{"level":"info","ts":"2023/01/12 20:44:25","caller":"main/main.go:26","msg":"Program","status":" ------ start ------"}
+{"level":"info","ts":"2023/01/12 20:44:31","caller":"controllers/controllers.go:29","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 20:44:53","caller":"controllers/controllers.go:29","msg":"[gin/Register]","result:":"success","reason":"注册成功"}
+{"level":"info","ts":"2023/01/12 20:48:35","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 20:48:35","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 20:48:54","caller":"controllers/controllers.go:29","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 20:50:38","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 20:50:38","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 20:50:48","caller":"controllers/controllers.go:29","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 20:51:06","caller":"utils/utils.go:11","msg":"[gin/Register]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/12 21:38:53","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:38:53","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:39:28","caller":"utils/utils.go:12","msg":"[gin/Register]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/12 21:39:34","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 21:42:51","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"查询用户失败"}
+{"level":"info","ts":"2023/01/12 21:46:23","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:46:23","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:46:29","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"查询用户失败"}
+{"level":"info","ts":"2023/01/12 21:47:25","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:47:25","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:47:32","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"查询用户失败"}
+{"level":"info","ts":"2023/01/12 21:48:20","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:48:20","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:48:25","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"查询用户失败"}
+{"level":"info","ts":"2023/01/12 21:49:28","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:49:28","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:49:35","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
+{"level":"info","ts":"2023/01/12 21:50:50","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:50:50","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:50:58","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
+{"level":"info","ts":"2023/01/12 21:51:42","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:51:42","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:51:49","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
+{"level":"info","ts":"2023/01/12 21:55:24","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:55:24","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:55:54","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"该用户未注册"}
+{"level":"info","ts":"2023/01/12 21:56:03","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/12 21:58:45","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/12 21:58:45","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/12 21:59:21","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/12 21:59:31","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"该用户未注册"}
+{"level":"info","ts":"2023/01/12 21:59:44","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
+{"level":"info","ts":"2023/01/12 22:00:24","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"success","reason":"注册成功"}
+{"level":"info","ts":"2023/01/12 22:00:46","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 22:00:53","caller":"utils/utils.go:12","msg":"[gin/Register]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/12 22:01:37","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
+{"level":"info","ts":"2023/01/12 22:01:43","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
+{"level":"info","ts":"2023/01/12 22:01:48","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"success","reason":"登录成功"}
