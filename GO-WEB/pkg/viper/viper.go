@@ -18,5 +18,6 @@ func InitViper() {
 		panic("Viper Unmarshal err: " + err.Error())
 	}
 
+	//fmt.Printf("%+v\n", allConfig)
 	allConfig.InitAllConfig()
 }

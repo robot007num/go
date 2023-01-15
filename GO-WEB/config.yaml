@@ -8,3 +8,17 @@ mysql:
   host: "localhost"
   port: 3306
   dbname: "go_web"
+  max_con: 200
+
+redis:
+  host: "localhost"
+  port: 6379
+
+log:
+  info_filename: "access.log"
+  err_filename: "error.log"
+  gin_filename: "gin.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 2
+  compress: true

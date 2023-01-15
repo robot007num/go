@@ -3,6 +3,7 @@ package log
 //封装zap库
 
 import (
+	"github.com/robot007num/go/go-web/model/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
@@ -242,7 +243,7 @@ func Sync() error {
 func InitLog() {
 	var tops = []TeeOption{
 		{
-			Filename: "access.log",
+			Filename: config.GetAllConfig().Log.InfoFileName,
 			Lef: func(lvl Level) bool {
 				return lvl >= InfoLevel
 			},
@@ -254,15 +255,15 @@ func InitLog() {
 			},
 		},
 		{
-			Filename: "error.log",
+			Filename: config.GetAllConfig().Log.ErrFileName,
 			Lef: func(lvl Level) bool {
 				return lvl >= ErrorLevel
 			},
 			Ropt: RotateOptions{
-				MaxSize:    1,
-				MaxAge:     30,
-				MaxBackups: 3,
-				Compress:   true,
+				MaxSize:    config.GetAllConfig().Log.LogMaxSize,
+				MaxAge:     config.GetAllConfig().Log.LogSaveDay,
+				MaxBackups: config.GetAllConfig().Log.LogBackups,
+				Compress:   config.GetAllConfig().Log.ComPress,
 			},
 		},
 	}

@@ -94,3 +94,19 @@
 {"level":"info","ts":"2023/01/12 22:01:37","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}
 {"level":"info","ts":"2023/01/12 22:01:43","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"密码错误"}
 {"level":"info","ts":"2023/01/12 22:01:48","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/14 23:34:12","caller":"main/main.go:25","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/14 23:34:12","caller":"main/main.go:27","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/14 23:40:36","caller":"utils/utils.go:26","msg":"[gin/login]","result:":"error","reason":"该用户未注册"}
+{"level":"info","ts":"2023/01/14 23:42:52","caller":"utils/utils.go:12","msg":"[gin/Register]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/14 23:43:08","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"success","reason":"注册成功"}
+{"level":"info","ts":"2023/01/15 17:07:55","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/15 17:07:55","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/15 17:36:01","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/15 17:36:01","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/15 17:37:19","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/15 17:37:19","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/15 17:44:57","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/15 17:44:57","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/15 17:47:44","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/15 17:47:44","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/15 17:53:18","caller":"utils/utils.go:26","msg":"[gin/Register]","result:":"error","reason":"该用户已注册"}

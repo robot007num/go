@@ -2,6 +2,7 @@ package gin
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/robot007num/go/go-web/model/config"
 	"github.com/robot007num/go/go-web/routes/user"
 	"io"
 	"os"
@@ -11,7 +12,7 @@ import (
 
 func InitGin() {
 
-	f, _ := os.Create("gin.log")
+	f, _ := os.Create(config.GetAllConfig().Log.GinFileName)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
 	r := gin.Default()

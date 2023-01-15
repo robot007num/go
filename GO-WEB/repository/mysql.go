@@ -15,8 +15,9 @@ var db *sqlx.DB
 func StartMySql() {
 	dbCon := config.GetAllConfig()
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?%s",
-		dbCon.User, dbCon.PassWord, dbCon.Host, dbCon.Port, dbCon.DbName,
+		dbCon.MySql.User, dbCon.MySql.PassWord, dbCon.MySql.Host, dbCon.MySql.Port, dbCon.DbName,
 		"charset=utf8mb4&parseTime=True&loc=Local&multiStatements=true")
+	//fmt.Println(dsn)
 	d, err := sqlx.Connect("mysql", dsn)
 	if err != nil {
 		panic("sqlx Connect fail,err: " + err.Error())

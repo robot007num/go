@@ -6,3 +6,8 @@
 3. Gin是Web开发框架
 4. Snowflake用于生成用户ID。
 5. sqlx用于数据库交互。
+
+2023年1月15日:
+1. 新增一个Redis库
+2. yaml新增 Mysql的最多连接变量, Redis库的配置和Log日记的配置
+3. 新增Redis库的连接
