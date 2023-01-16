@@ -2,8 +2,8 @@ package utils
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/robot007num/go/go-web/model/response"
 	"github.com/robot007num/go/go-web/pkg/log"
-	"net/http"
 )
 
 //ParseBody 接收并检验参数
@@ -16,10 +16,12 @@ func ParseBody(c *gin.Context, x interface{}, info string) error {
 	return nil
 }
 
-func ReturnBody(c *gin.Context, res string) {
-	c.JSON(http.StatusOK, gin.H{
-		"msg": res,
-	})
+func ReturnBody(c *gin.Context, status int, res response.ReturnData) {
+	//c.JSON(http.StatusOK, gin.H{
+	//	"msg": res,
+	//})
+
+	c.JSON(status, res)
 }
 
 func RecordLog(program string, res string, info string) {
