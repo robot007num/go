@@ -3,6 +3,7 @@ package user
 import (
 	"github.com/robot007num/go/go-web/model/response"
 	"github.com/robot007num/go/go-web/model/user"
+	"github.com/robot007num/go/go-web/pkg/jwt"
 	"github.com/robot007num/go/go-web/pkg/snowflake"
 	sqluser "github.com/robot007num/go/go-web/repository/user"
 )
@@ -67,5 +68,12 @@ func LoginService(UserRe *user.Login) (response.ResCode, string, string) {
 	if (UserRe.Username != sqlu.Username) || (UserRe.Password != sqlu.Password) {
 		return response.CodeLoginError, logError, response.InfoUserPassword
 	}
-	return response.CodeLoginSuccess, logSuccess, ""
+
+	//3. 生产Token
+	token, log := jwt.NewToken(sqlu)
+	if log != "" {
+		return response.CodeLoginError, logSuccess, log
+	}
+
+	return response.CodeLoginSuccess, logSuccess, token
 }

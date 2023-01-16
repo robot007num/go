@@ -127,3 +127,19 @@
 {"level":"info","ts":"2023/01/16 02:43:10","caller":"utils/utils.go:28","msg":"[gin/login]","result:":"success","reason":"登录成功"}
 {"level":"info","ts":"2023/01/16 22:19:15","caller":"main/main.go:28","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
 {"level":"info","ts":"2023/01/16 22:19:15","caller":"main/main.go:30","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 00:16:26","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 00:16:26","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 00:16:48","caller":"utils/utils.go:28","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/17 01:00:23","caller":"utils/utils.go:28","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/17 01:14:30","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 01:14:30","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 01:15:37","caller":"utils/utils.go:74","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/17 01:16:32","caller":"utils/utils.go:74","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/17 01:49:00","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 01:49:00","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 01:54:56","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 01:54:56","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 01:55:28","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 01:55:28","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/17 01:59:54","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/17 01:59:54","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}

@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+
 	//1. 读取配置文件
 	viper.InitViper()
 

@@ -1,5 +1,7 @@
 package response
 
+import "net/http"
+
 /* 返回给客户端的结构体
 {
 	code: //状态码
@@ -34,6 +36,7 @@ var CodeMsg = map[ResCode]string{
 	CodeInvalidParameters: "参数错误",
 }
 
+//记录错误详细信息
 const (
 	InfoUserRegister   = "该用户已注册"
 	InfoUserVerify     = "验证用户失败"
@@ -42,6 +45,14 @@ const (
 	InfoUserUnRegister = "该用户未注册"
 	InfoUserSelect     = "查询用户失败"
 	InfoUserPassword   = "用户名/密码错误"
+	InfoTokenCreate    = "生成Token失败"
+	InfoTokenNothing   = "请求头中Token为空"
+	InfoTokenFormat    = "请求头中Token格式不正确"
+	InfoTokenInvalid   = "请求头中Token失效"
+)
+
+var (
+	HttpOK = http.StatusOK
 )
 
 func (c ResCode) Msg() string {
