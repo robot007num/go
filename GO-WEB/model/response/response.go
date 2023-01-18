@@ -49,6 +49,7 @@ const (
 	InfoTokenNothing   = "请求头中Token为空"
 	InfoTokenFormat    = "请求头中Token格式不正确"
 	InfoTokenInvalid   = "请求头中Token失效"
+	InfoTokenNumber    = "请求头中缺失AccessToken或者RefreshToken"
 )
 
 var (

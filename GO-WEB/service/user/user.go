@@ -49,7 +49,7 @@ func RegisterService(UserRe *user.Register) (response.ResCode, string, string) {
 	return response.CodeRegisterSuccess, logSuccess, ""
 }
 
-func LoginService(UserRe *user.Login) (response.ResCode, string, string) {
+func LoginService(UserRe *user.Login, allToken *jwt.AllToken) (response.ResCode, string, string) {
 	//1. 验证账户是否存在
 	ok, err := sqluser.VerifyUserExits(UserRe.Username)
 	if err != nil {
@@ -69,11 +69,11 @@ func LoginService(UserRe *user.Login) (response.ResCode, string, string) {
 		return response.CodeLoginError, logError, response.InfoUserPassword
 	}
 
-	//3. 生产Token
-	token, log := jwt.NewToken(sqlu)
+	//3. 生成access_token和refresh_token
+	log := jwt.NewToken(sqlu, allToken)
 	if log != "" {
 		return response.CodeLoginError, logSuccess, log
 	}
 
-	return response.CodeLoginSuccess, logSuccess, token
+	return response.CodeLoginSuccess, logSuccess, ""
 }
