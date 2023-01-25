@@ -24,16 +24,24 @@ const (
 	CodeRegisterError
 	CodeLoginError
 	CodeInvalidParameters
+	CodeInsertSectionSuccess
+	CodeInsertSectionError
+	CodeGetSectionSuccess
+	CodeGetSectionError
 	CodeMax
 )
 
 var CodeMsg = map[ResCode]string{
-	CodeRegisterSuccess:   "注册成功",
-	CodeRegisterError:     "注册失败",
-	CodeLoginSuccess:      "登录成功",
-	CodeMax:               "新的错误",
-	CodeLoginError:        "登录失败",
-	CodeInvalidParameters: "参数错误",
+	CodeRegisterSuccess:      "注册成功",
+	CodeRegisterError:        "注册失败",
+	CodeLoginSuccess:         "登录成功",
+	CodeMax:                  "新的错误",
+	CodeLoginError:           "登录失败",
+	CodeInvalidParameters:    "参数错误",
+	CodeInsertSectionSuccess: "插入板块成功",
+	CodeInsertSectionError:   "插入板块失败",
+	CodeGetSectionSuccess:    "获取板块成功",
+	CodeGetSectionError:      "获取板块失败",
 }
 
 //记录错误详细信息
@@ -50,6 +58,8 @@ const (
 	InfoTokenFormat    = "请求头中Token格式不正确"
 	InfoTokenInvalid   = "请求头中Token失效"
 	InfoTokenNumber    = "请求头中缺失AccessToken或者RefreshToken"
+	InfoSectionSame    = "已有相同的板块"
+	InfoSectionFail    = "板块查询失败"
 )
 
 var (

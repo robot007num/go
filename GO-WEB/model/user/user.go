@@ -14,3 +14,8 @@ type RegisterTable struct {
 	Register
 	Userid int64 `db:"user_id"`
 }
+
+type RootAddSection struct {
+	SectionName  string `json:"section_name" db:"section_name" binding:"required"`
+	Introduction string `json:"introduction" db:"introduction" binding:"required"`
+}

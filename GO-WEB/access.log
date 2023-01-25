@@ -220,3 +220,46 @@
 {"level":"info","ts":"2023/01/18 14:10:06","caller":"main/main.go:29","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
 {"level":"info","ts":"2023/01/18 14:10:06","caller":"main/main.go:31","msg":"[Program]","result":" Program start"}
 {"level":"info","ts":"2023/01/18 14:10:15","caller":"utils/utils.go:100","msg":"[gin/login]","result:":"success","reason":"登录成功"}
+{"level":"info","ts":"2023/01/25 17:16:49","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:16:49","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:17:00","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:17:00","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:19:14","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:19:14","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:19:42","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 17:20:22","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:20:22","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:20:25","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 17:20:57","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:20:57","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:21:18","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 17:26:51","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:26:52","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:26:54","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"插入板块成功"}
+{"level":"info","ts":"2023/01/25 17:27:16","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 17:28:01","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 17:28:41","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:28:41","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:28:49","caller":"utils/utils.go:24","msg":"[gin/login]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/25 17:30:03","caller":"utils/utils.go:24","msg":"[gin/login]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/25 17:31:23","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 17:31:23","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 17:31:25","caller":"utils/utils.go:24","msg":"[gin/login]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/25 17:31:31","caller":"utils/utils.go:24","msg":"[gin/login]","result:":"error","reason":"客户端传递参数错误"}
+{"level":"info","ts":"2023/01/25 17:31:36","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"插入板块失败"}
+{"level":"info","ts":"2023/01/25 21:45:17","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 21:45:17","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 21:45:30","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"error","reason":"获取板块失败"}
+{"level":"info","ts":"2023/01/25 21:51:14","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 21:51:14","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 21:51:20","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 21:54:15","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 21:57:09","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 21:57:09","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 21:57:11","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 23:03:07","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"info","ts":"2023/01/25 23:03:07","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}
+{"level":"info","ts":"2023/01/25 23:04:10","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 23:04:40","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 23:04:51","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}
+{"level":"info","ts":"2023/01/25 23:04:57","caller":"utils/utils.go:100","msg":"[gin/Register]","result:":"success","reason":"获取板块成功"}

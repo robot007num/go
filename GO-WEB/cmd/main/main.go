@@ -7,6 +7,9 @@ import (
 	"github.com/robot007num/go/go-web/repository"
 )
 
+//待补充的功能：
+//验证是否与登录时同样的Token(限制只能登录一个设备)
+
 func main() {
 
 	//1. 读取配置文件
@@ -20,6 +23,7 @@ func main() {
 
 	//3. 开启Redis
 	repository.StartRedis()
+	defer repository.GetRedisCon().Close()
 
 	//4. 初始化日志
 	log.InitLog()

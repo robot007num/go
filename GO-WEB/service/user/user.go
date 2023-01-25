@@ -75,5 +75,10 @@ func LoginService(UserRe *user.Login, allToken *jwt.AllToken) (response.ResCode,
 		return response.CodeLoginError, logSuccess, log
 	}
 
+	//4. 存入Redis数据库
+	//var userkey = "user:" + UserRe.Username
+	//repository.GetRedisCon().Do("HSET", userkey, "access_token", allToken.AccessToken)
+	//repository.GetRedisCon().Do("HSET", userkey, "refresh_toke", allToken.RefreshToken)
+
 	return response.CodeLoginSuccess, logSuccess, ""
 }
