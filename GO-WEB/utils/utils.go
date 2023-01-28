@@ -71,6 +71,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 			c.Abort()
 			return
 		}
+
 		// ------------- 判断剩余R剩余时间 ---------------------
 		if mc.ExpiresAt.Sub(time.Now()).Minutes() < timeRemaining {
 			RToken, err = jwt.CreateRefreshToken()
@@ -78,12 +79,12 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 
 		// ------------- 判断AToken是否生效 ---------------------
 		mc, err = jwt.ParsingToken(AToken)
+
 		if err != nil {
 			var m Model.Login
 			user.VerifyUserLogin(mc.Username, &m)
 			AToken, err = jwt.CreateAccessToken(m)
 		}
-
 		// 将当前请求的username信息保存到请求的上下文c上
 		c.Set("username", mc.Username)
 		c.Set("RToken", RToken)

@@ -34,3 +34,17 @@ CREATE TABLE `section_class`(
     `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (`id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+DROP TABLE IF EXISTS `new_post`;
+CREATE TABLE `new_post`(
+    `id` bigint(20) NOT NULL AUTO_INCREMENT,
+    `post_id` bigint(20) NOT NULL COMMENT '帖子ID',
+    `title` varchar(128) COLLATE utf8mb4_general_ci NOT NULL COMMENT '标题',
+    `content` varchar(8192) COLLATE utf8mb4_general_ci NOT NULL COMMENT '内容',
+    `author_name` bigint(20) NOT NULL COMMENT '所属用户',
+    `section_class` bigint(20) NOT NULL COMMENT '所属社区',
+    `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT '帖子状态',
+    `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+    `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

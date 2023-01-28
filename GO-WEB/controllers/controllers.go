@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"fmt"
+	"strconv"
 
 	"github.com/robot007num/go/go-web/model/section"
 
@@ -144,6 +145,91 @@ func GetSectionClass(c *gin.Context) {
 
 	var all []section.SectionClassList
 	res, logres, info := service_section.GetSectionClass(&all, id)
+
+	var resStu response.ReturnData
+	if info == "" {
+		resStu = utils.CreateReturnJson(res, all)
+	} else {
+		resStu = utils.CreateReturnJson(res, info)
+	}
+
+	//2. 返回给客户端并记录此次结果
+
+	utils.ReturnBody(c, response.HttpOK, resStu)
+
+	//3. 记录日志
+	utils.RecordLog(GinRegister, logres, res.Msg())
+
+}
+
+func PostNewPost(c *gin.Context) {
+	//1. 参数验证
+	UserRe := section.NewPost{SectionClass: 1}
+	var resStu response.ReturnData
+	if err := utils.ParseBody(c, &UserRe, GinLogin); err != nil {
+		resStu = utils.CreateReturnJson(response.CodeInvalidParameters, err.Error())
+		utils.ReturnBody(c, response.HttpOK, resStu)
+		return
+	}
+
+	//获取用户名
+	name, _ := c.Get("username")
+
+	//2. 业务逻辑
+	res, logres, info := service_section.PostNewPost(UserRe, name.(string))
+
+	//3. 返回给客户端并记录此次结果
+	resStu = utils.CreateReturnJson(res, info)
+	utils.ReturnBody(c, response.HttpOK, resStu)
+
+	//4. 记录日志
+	utils.RecordLog(GinRegister, logres, res.Msg())
+
+}
+
+func GetAllPost(c *gin.Context) {
+	// 1. 业务逻辑
+	id := c.Param("classId")
+	parseInt, err := strconv.ParseInt(id, 10, 64)
+	if err != nil {
+		println("ParseInt fail :" + err.Error())
+	}
+
+	var all []section.SectionClassPost
+	res, logres, info := service_section.GetAllPost(&all, parseInt)
+
+	var resStu response.ReturnData
+	if info == "" {
+		resStu = utils.CreateReturnJson(res, all)
+	} else {
+		resStu = utils.CreateReturnJson(res, info)
+	}
+
+	//2. 返回给客户端并记录此次结果
+
+	utils.ReturnBody(c, response.HttpOK, resStu)
+
+	//3. 记录日志
+	utils.RecordLog(GinRegister, logres, res.Msg())
+}
+
+func GetSpecifyPost(c *gin.Context) {
+	//1. 参数获取
+	cid := c.Param("classId")
+	pid := c.Param("postId")
+	cInt, err := strconv.ParseInt(cid, 10, 64)
+	if err != nil {
+		println("ParseInt fail :" + err.Error())
+	}
+
+	pInt, err := strconv.ParseInt(pid, 10, 64)
+	if err != nil {
+		println("ParseInt fail :" + err.Error())
+	}
+
+	//2. 业务逻辑
+	var all section.SectionClassPost
+	res, logres, info := service_section.GetSpecifyPost(&all, cInt, pInt)
 
 	var resStu response.ReturnData
 	if info == "" {

@@ -32,8 +32,8 @@ type AllToken struct {
 }
 
 const (
-	TokenAccessEffectiveTime  = time.Minute
-	TokenRefreshEffectiveTime = time.Minute * 15
+	TokenAccessEffectiveTime  = time.Hour
+	TokenRefreshEffectiveTime = time.Hour * 15
 	TokenIssuer               = "robot007num"
 )
 
@@ -93,13 +93,19 @@ func NewToken(u user.Login, Token *AllToken) (log string) {
 }
 
 func ParsingToken(tokenString string) (*TokenClaims, error) {
+	var token *jwt.Token
+	var err error
 	//解析Token
-	//token, err := jwt.Parse(tokenString, func(token *jwt.Token)(i interface{}, err error) {
-	//	return MySecret, nil
-	//}
-	token, err := jwt.ParseWithClaims(tokenString, &TokenClaims{}, func(token *jwt.Token) (interface{}, error) {
+	//if !b {
+	//	token, err = jwt.Parse(tokenString, func(token *jwt.Token) (i interface{}, err error) {
+	//		return MySecret, nil
+	//	})
+	//} else {
+	token, err = jwt.ParseWithClaims(tokenString, &TokenClaims{}, func(token *jwt.Token) (interface{}, error) {
 		return MySecret, nil
 	})
+	//}
+
 	if err != nil {
 		return nil, err
 	}

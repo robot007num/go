@@ -28,6 +28,10 @@ const (
 	CodeInsertSectionError
 	CodeGetSectionSuccess
 	CodeGetSectionError
+	CodeNewPostSuccess
+	CodeNewPostError
+	CodeGetPostSuccess
+	CodeGetPostError
 	CodeMax
 )
 
@@ -42,6 +46,10 @@ var CodeMsg = map[ResCode]string{
 	CodeInsertSectionError:   "插入板块失败",
 	CodeGetSectionSuccess:    "获取板块成功",
 	CodeGetSectionError:      "获取板块失败",
+	CodeNewPostSuccess:       "帖子新建成功",
+	CodeNewPostError:         "帖子新建失败",
+	CodeGetPostSuccess:       "获取帖子成功",
+	CodeGetPostError:         "获取帖子失败",
 }
 
 //记录错误详细信息

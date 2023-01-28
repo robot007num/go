@@ -78,3 +78,33 @@ func GetSectionClass(all *[]section.SectionClassList, id string) error {
 	}
 	return nil
 }
+
+func InsertNewPost(p section.NewPost, postId int64, user string) error {
+
+	sqlStr := `INSERT INTO new_post(post_id,title,content,author_name,section_class) 
+				VALUES(?,?,?,?,?)`
+	_, err := repository.GetDb().Exec(sqlStr, postId, p.Title, p.Content, user, p.SectionClass)
+	if err != nil {
+		return err
+	}
+	//fmt.Println(ret.LastInsertId())
+	return nil
+}
+
+func GetSectionPost(se *[]section.SectionClassPost, id int64) error {
+	sqlStr := `SELECT post_id,author_name,title,content,create_time
+			 FROM new_post WHERE section_class=?`
+	if err := repository.GetDb().Select(se, sqlStr, id); err != nil {
+		return err
+	}
+	return nil
+}
+
+func GetSpecifyPost(se *section.SectionClassPost, sid int64, pid int64) error {
+	sqlStr := `SELECT post_id,author_name,title,content,create_time
+			 FROM new_post WHERE section_class=? AND post_id=?`
+	if err := repository.GetDb().Get(se, sqlStr, sid, pid); err != nil {
+		return err
+	}
+	return nil
+}
