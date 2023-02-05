@@ -1,0 +1,6 @@
+{"level":"info","time":"2023/02/03 - 00:54:24.854","message":"测试日志","status":"增加Viper读取配置"}
+{"level":"info","time":"2023/02/03 - 01:31:34.296","message":"测试日志","status":"增加Viper读取配置"}
+{"level":"info","time":"2023/02/03 - 16:20:19.332","message":"服务器退出","初始化数据库":"失败"}
+{"level":"info","time":"2023/02/03 - 21:57:14.031","message":"router register success"}
+{"level":"info","time":"2023/02/03 - 21:57:14.041","message":"server run success on ","address":":8888"}
+{"level":"info","time":"2023/02/03 - 21:59:18.728","message":"accept tcp [::]:8888: use of closed network connection"}

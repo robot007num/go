@@ -246,3 +246,16 @@ func GetSpecifyPost(c *gin.Context) {
 	utils.RecordLog(GinRegister, logres, res.Msg())
 
 }
+
+func UserVote(c *gin.Context) {
+	//1. 参数验证
+	UserRe := user.VotePost{}
+	var resStu response.ReturnData
+	if err := utils.ParseBody(c, &UserRe, GinLogin); err != nil {
+		resStu = utils.CreateReturnJson(response.CodeInvalidParameters, err.Error())
+		utils.ReturnBody(c, response.HttpOK, resStu)
+		return
+	}
+
+	// 2. 业务逻辑
+}

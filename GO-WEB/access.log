@@ -366,3 +366,5 @@
 {"level":"info","ts":"2023/01/28 16:54:27","caller":"utils/utils.go:101","msg":"[gin/Register]","result:":"success","reason":"获取帖子成功"}
 {"level":"info","ts":"2023/01/28 16:54:36","caller":"utils/utils.go:101","msg":"[gin/Register]","result:":"error","reason":"获取帖子失败"}
 {"level":"info","ts":"2023/01/28 16:54:41","caller":"utils/utils.go:101","msg":"[gin/Register]","result:":"success","reason":"获取帖子成功"}
+{"level":"error","ts":"2023/02/03 22:10:27","caller":"main/main.go:33","msg":"[Program]","result":"success","reason":"环境初始化已全部完成"}
+{"level":"error","ts":"2023/02/03 22:10:27","caller":"main/main.go:35","msg":"[Program]","result":" Program start"}

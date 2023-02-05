@@ -82,3 +82,26 @@ func LoginService(UserRe *user.Login, allToken *jwt.AllToken) (response.ResCode,
 
 	return response.CodeLoginSuccess, logSuccess, ""
 }
+
+func VotePost(u user.VotePost) (response.ResCode, string, string) {
+	//1. 当是0时,则代表要取消或者是点赞
+	if u.VoteValue == 0 {
+		// 从点赞去除
+
+		// 从取消去除
+	}
+
+	//2. 1 则是代表要点赞
+	{
+		// 直接从点踩集合去掉
+		// 加入点赞集合
+	}
+
+	// 3. -1 则是代表要点踩
+	{
+		// 直接从点赞集合去掉
+		// 加入点踩集合
+	}
+
+	return response.CodeLoginSuccess, logSuccess, ""
+}

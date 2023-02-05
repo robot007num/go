@@ -22,17 +22,20 @@ func main() {
 	}
 
 	//3. 开启Redis
-	repository.StartRedis()
-	defer repository.GetRedisCon().Close()
+	//repository.StartRedis()
+	//defer repository.GetRedisCon().Close()
 
 	//4. 初始化日志
 	log.InitLog()
 	defer log.Sync()
 
 	//5. 记录日记
-	log.Info("[Program]", log.String("result", "success"),
+	log.Error("[Program]", log.String("result", "success"),
 		log.String("reason", "环境初始化已全部完成"))
-	log.Info("[Program]", log.String("result", " Program start"))
+	log.Error("[Program]", log.String("result", " Program start"))
+	//log.Info("[Program]", log.String("result", "success"),
+	//	log.String("reason", "环境初始化已全部完成"))
+	//log.Info("[Program]", log.String("result", " Program start"))
 
 	//6. 开启gin服务
 	gin.InitGin()
