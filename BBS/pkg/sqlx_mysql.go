@@ -23,7 +23,7 @@ func SqlxMysql() *sqlx.DB {
 		"charset=utf8mb4&parseTime=True&loc=Local&multiStatements=true")
 	d, err := sqlx.Connect("mysql", dsn)
 	if err != nil {
-		global.GVA_LOG.Info("Sqlx连接MySQL", zap.String("status", "失败"), zap.String("err", err.Error()))
+		global.GVA_LOG.Error("Sqlx连接MySQL", zap.String("status", "失败"), zap.String("err", err.Error()))
 		os.Exit(-1)
 	}
 	return d
