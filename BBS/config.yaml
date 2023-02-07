@@ -6,11 +6,14 @@ zap:
   format: json
   prefix: ""
   director: log
-  show-line: true
+  show-line: false
   encode-level: LowercaseLevelEncoder
   stacktrace-key: stacktrace
   log-in-console: true
   max-age: 7
+  size: 10
+  back_up:  1
+  compress: true
 
 # system configuration
 system:

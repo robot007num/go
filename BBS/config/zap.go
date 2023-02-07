@@ -16,6 +16,9 @@ type Zap struct {
 	MaxAge       int  `mapstructure:"max-age" json:"max-age" yaml:"max-age"`                      // 日志留存时间
 	ShowLine     bool `mapstructure:"show-line" json:"show-line" yaml:"show-line"`                // 显示行
 	LogInConsole bool `mapstructure:"log-in-console" json:"log-in-console" yaml:"log-in-console"` // 输出控制台
+	Size         int  `mapstructure:"size" json:"size" yaml:"size"`                               // 大小(M)
+	BakeUp       int  `mapstructure:"bake_up" json:"bake_up" yaml:"bake_up"`                      // 最大备份数
+	Compress     bool `mapstructure:"compress" json:"compress" yaml:"compress"`                   // 压缩
 }
 
 // ZapEncodeLevel 根据 EncodeLevel 返回 zapcore.LevelEncoder
