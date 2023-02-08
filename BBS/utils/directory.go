@@ -2,6 +2,9 @@ package utils
 
 import (
 	"errors"
+	"github.com/gin-gonic/gin"
+	"github.com/robot007num/go/bbs/model/common/response"
+	"net/http"
 	"os"
 )
 
@@ -23,4 +26,14 @@ func PathExists(path string) (bool, error) {
 		return false, nil
 	}
 	return false, err
+}
+
+func Result(code response.ResCode, data interface{}, c *gin.Context) {
+	res := response.Response{
+		Code: int64(code),
+		Msg:  code.Msg(),
+		Data: data,
+	}
+
+	c.JSON(http.StatusOK, res)
 }
