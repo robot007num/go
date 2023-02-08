@@ -1,5 +1,12 @@
 # github.com/robot007num/go/bbs Global Configuration
 
+# jwt configuration
+jwt:
+  signing-key: robot007num
+  rexpires-time: 7  #hour
+  aexpires-time: 1  #hour
+  issuer: robot007num
+
 # zap logger configuration
 zap:
   level: info

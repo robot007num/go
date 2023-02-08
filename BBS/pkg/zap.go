@@ -1,4 +1,4 @@
-package log
+package pkg
 
 import (
 	"go.uber.org/zap"
@@ -10,7 +10,6 @@ import (
 
 import (
 	"github.com/robot007num/go/bbs/global"
-	"github.com/robot007num/go/bbs/pkg"
 	"time"
 )
 
@@ -62,7 +61,7 @@ func GetZapCores() []zapcore.Core {
 // GetEncoderCore 获取Encoder的 zapcore.Core
 // Author [SliverHorn](https://github.com/SliverHorn)
 func GetEncoderCore(l zapcore.Level, level zap.LevelEnablerFunc) zapcore.Core {
-	writer := pkg.GetWriteSyncer(l.String()) //
+	writer := GetWriteSyncer(l.String()) //
 
 	return zapcore.NewCore(GetEncoder(), writer, level)
 }

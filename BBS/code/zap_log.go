@@ -3,7 +3,7 @@ package code
 import (
 	"fmt"
 	"github.com/robot007num/go/bbs/global"
-	"github.com/robot007num/go/bbs/pkg/log"
+	"github.com/robot007num/go/bbs/pkg"
 	"github.com/robot007num/go/bbs/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -16,7 +16,7 @@ func Zap() (MyLog *zap.Logger) {
 		_ = os.Mkdir(global.GVA_CONFIG.Zap.Director, os.ModePerm)
 	}
 
-	cores := log.GetZapCores()
+	cores := pkg.GetZapCores()
 	MyLog = zap.New(zapcore.NewTee(cores...))
 
 	if global.GVA_CONFIG.Zap.ShowLine {

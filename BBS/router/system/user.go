@@ -7,9 +7,10 @@ import (
 
 type UserRouter struct{}
 
-func (*UserRouter) InitUserRouter(Router *gin.Engine) {
+func (*UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 	userRouter := Router.Group("user")
 	{
-		userRouter.POST("admin_register", controller.Register)
+		userRouter.POST("changePassword", controller.ChangePassword)
+
 	}
 }
