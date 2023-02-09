@@ -5,6 +5,7 @@ import (
 	"github.com/fvbock/endless"
 	"github.com/gin-gonic/gin"
 	"github.com/robot007num/go/bbs/global"
+	"github.com/robot007num/go/bbs/pkg"
 	"go.uber.org/zap"
 	"time"
 )
@@ -19,6 +20,7 @@ func initServer(address string, router *gin.Engine) server {
 
 func RunWindowsServer() {
 	//初始化Redis
+	pkg.Redis()
 
 	//
 	Router := InitAllRouters()

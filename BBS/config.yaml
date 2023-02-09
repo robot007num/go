@@ -3,7 +3,7 @@
 # jwt configuration
 jwt:
   signing-key: robot007num
-  rexpires-time: 7  #hour
+  rexpires-time: 2  #hour
   aexpires-time: 1  #hour
   issuer: robot007num
 
@@ -43,3 +43,9 @@ mysql:
   max-open-conns: 100
   log-mode: ""
   log-zap: false
+
+# redis configuration
+redis:
+  db: 0
+  addr: 127.0.0.1:6800
+  password: ""

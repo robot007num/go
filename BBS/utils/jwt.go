@@ -1,5 +1,7 @@
 package utils
 
+//JWT 配置
+
 import (
 	"errors"
 	"github.com/golang-jwt/jwt/v4"
@@ -19,7 +21,7 @@ func NewJWT() *JWT {
 }
 
 var (
-	TokenExpired     = errors.New("token已到期")
+	TokenExpired     = errors.New("token已过期 刷新Token接口为/refresh_token")
 	TokenNotValidYet = errors.New("token尚未生效")
 	TokenMalformed   = errors.New("token格式不符合")
 	TokenInvalid     = errors.New("token无效")
@@ -66,17 +68,17 @@ func (j *JWT) CreateClaims(baseClaims request.BaseClaims) (c1, c2 request.TokenC
 	c1 = request.TokenClaims{
 		BaseClaims: baseClaims,
 		RegisteredClaims: jwt.RegisteredClaims{
-			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),              // 签名生效时间
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * time.Duration(bf))), // 过期时间 1天  配置文件
-			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                      // 签名的发行者
+			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),                // 签名生效时间
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Minute * time.Duration(bf))), // 过期时间 1小时  配置文件
+			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                        // 签名的发行者
 		},
 	}
 	c2 = request.TokenClaims{
 		BaseClaims: baseClaims,
 		RegisteredClaims: jwt.RegisteredClaims{
-			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),               // 签名生效时间
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * time.Duration(bf2))), // 过期时间 7天  配置文件
-			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                       // 签名的发行者
+			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),                 // 签名生效时间
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Minute * time.Duration(bf2))), // 过期时间 7小时  配置文件
+			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                         // 签名的发行者
 		},
 	}
 

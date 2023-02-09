@@ -17,3 +17,6 @@ JWT的认证和生成已完成。
 正确的用法是：Access Token拿来做需要鉴权的Token操作，而Refresh Token负责刷新Access Token。
 还学习到单点登录的思路。 明天实现下
 
+2023年2月9日18:53:04
+JWT的三重认证已实现。
+

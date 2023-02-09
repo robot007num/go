@@ -10,7 +10,6 @@ type UserRouter struct{}
 func (*UserRouter) InitUserRouter(Router *gin.RouterGroup) {
 	userRouter := Router.Group("user")
 	{
-		userRouter.POST("changePassword", controller.ChangePassword)
-
+		userRouter.POST("change_password", controller.ChangePassword)
 	}
 }

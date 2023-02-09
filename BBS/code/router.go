@@ -64,5 +64,7 @@ func JwtAuth() gin.HandlerFunc {
 		//3. 将当前请求的username信息保存到请求的上下文c上
 		c.Set("username", claims.UserName)
 		c.Set("userid", claims.UserID)
+
+		c.Next()
 	}
 }
