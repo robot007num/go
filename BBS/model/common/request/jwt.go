@@ -9,6 +9,6 @@ type TokenClaims struct {
 }
 
 type BaseClaims struct {
-	UserID   string
+	UserID   int64
 	UserName string
 }

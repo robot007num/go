@@ -3,12 +3,14 @@ module github.com/robot007num/go/bbs
 go 1.18
 
 require (
+	github.com/bwmarrin/snowflake v0.3.0
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-gonic/gin v1.8.2
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/golang-jwt/jwt/v4 v4.4.3
+	github.com/google/uuid v1.1.2
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/spf13/viper v1.15.0
 	go.uber.org/zap v1.24.0
