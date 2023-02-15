@@ -2,7 +2,6 @@ package v1
 
 import (
 	"errors"
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/robot007num/go/bbs/dao"
 	"github.com/robot007num/go/bbs/global"
@@ -16,10 +15,14 @@ import (
 )
 
 const (
-	ErrorJsonBind     = "传参有误"
-	ErrorTokenNil     = "Refresh Token为空"
-	ErrorUserExits    = "用户已存在"
-	ErrorUserNotExits = "用户不存在"
+	ErrorJsonBind           = "传参有误"
+	ErrorTokenNil           = "Refresh Token为空"
+	ErrorUserExits          = "用户已存在"
+	ErrorUserNotExits       = "用户不存在"
+	ErrorUserPassword       = "原密码不正确"
+	ErrorUserPasswordChange = "修改密码失败"
+	ErrorUserAccess         = "权限错误"
+	ErrSQL                  = "数据库操作失败"
 )
 
 // TokenNext
@@ -115,11 +118,11 @@ func RefreshToken(c *gin.Context) {
 }
 
 // Login
-// @Tags     Base
+// @Tags     user
 // @Summary  用户登录
 // @Produce   application/json
-// @Param    data  body      systemReq.Login                                             true  "账户, 密码"
-// @Success  200   {object}  response.Response{data=systemRes.LoginResponse,msg=string}  "返回用户所有基本信息,双token"
+// @Param    data  body      request.Login                                            true  "账户, 密码"
+// @Success  200   {object}  response.Response{data=response.LoginResponse,msg=string}  "返回用户所有基本信息,双token"
 // @Router   /base/login [post]
 func Login(c *gin.Context) {
 	//1. 获取参数
@@ -131,7 +134,7 @@ func Login(c *gin.Context) {
 	}
 	//2. 校验用户名和密码是否正确
 	var su response.SQLUser
-	su, err = dao.SQLUserSelect(u.Account)
+	su, err = dao.SQLUserSelectToAccount(u.Account)
 	if err != nil {
 		utils.Result(-1, ErrorUserNotExits, c)
 		return
@@ -163,10 +166,10 @@ func Login(c *gin.Context) {
 }
 
 // Register
-// @Tags     Base
+// @Tags     user
 // @Summary  用户注册
 // @Produce   application/json
-// @Param    data  body      Req.Login                                             true  "用户名, 密码"
+// @Param    data  body      request.Login                                            true  "用户名, 密码"
 // @Success  200   {object}  response.Response{data=systemRes.LoginResponse,msg=string}  "返回用户所有基本信息"
 // @Router   /base/Register [post]
 func Register(c *gin.Context) {
@@ -180,7 +183,7 @@ func Register(c *gin.Context) {
 
 	//2. 业务逻辑
 	//验证账户是否已注册
-	_, err = dao.SQLUserSelect(u.Account)
+	_, err = dao.SQLUserSelectToAccount(u.Account)
 	if err == nil {
 		utils.Result(-1, ErrorUserExits, c)
 		return
@@ -194,25 +197,63 @@ func Register(c *gin.Context) {
 
 	err = dao.SQLInsertUser(sqlU)
 	if err != nil {
-		utils.Result(-1, nil, c)
+		utils.Result(-1, ErrSQL, c)
+		global.GVA_LOG.Error("MYSQL数据库", zap.String("err:", err.Error()))
 		return
 	}
 
-	sqlU, err = dao.SQLUserSelect(u.Account)
+	sqlU, err = dao.SQLUserSelectToAccount(u.Account)
 	if err != nil {
-		utils.Result(-1, nil, c)
+		utils.Result(-1, ErrSQL, c)
+		global.GVA_LOG.Error("MYSQL数据库", zap.String("err:", err.Error()))
 		return
 	}
 
 	//3. 返客户端
-	global.GVA_LOG.Info("注册账户成功", zap.String("账户:", u.Account))
+	global.GVA_LOG.Info("注册账户", zap.String("status:", "成功"))
 	utils.Result(0, sqlU, c)
 }
 
+// ChangePassword
+// @Tags     user
+// @Summary  用户修改密码
+// @Security  ApiKeyAuth
+// @Produce   application/json
+// @Param    data  body      request.ChangePasswordReq      true  "旧密码,新密码"
+// @Success  200   {object}  response.Response{msg=string}  "修改密码成功"
+// @Router   /user/ChangePassword [post]
 func ChangePassword(c *gin.Context) {
-	username, _ := c.Get("username")
-	userid, _ := c.Get("userid")
-	fmt.Println("username :", username)
-	fmt.Println("userid :", userid)
-	utils.Result(0, "检验Token成功", c)
+	//1. 检验参数
+	var u request.ChangePasswordReq
+	err := c.ShouldBindJSON(&u)
+	if err != nil {
+		utils.Result(-1, ErrorJsonBind, c)
+		return
+	}
+
+	userid := utils.GetUserUuid(c)
+
+	//2. 业务逻辑
+	var old string
+	old, err = dao.SQLUserSelectPart(userid)
+	if err != nil {
+		utils.Result(-1, ErrSQL, c)
+		global.GVA_LOG.Error("MYSQL数据库", zap.String("err:", err.Error()))
+		return
+	}
+
+	if old != u.Password {
+		utils.Result(-1, ErrorUserPassword, c)
+		return
+	}
+
+	err = dao.SQLUserChange(u.NewPassword, userid)
+	if err != nil {
+		utils.Result(-1, ErrorUserPasswordChange, c)
+		return
+	}
+
+	//3. 返回
+	global.GVA_LOG.Info("用户修改密码", zap.String("status", "成功"))
+	utils.Result(0, "修改密码成功", c)
 }

@@ -31,6 +31,9 @@ func InitAllRouters() *gin.Engine {
 	PrivateGroup.Use(JwtAuth())
 	{
 		systemRouter.InitUserRouter(PrivateGroup)
+		systemRouter.InitCommunityRouter(PrivateGroup)
+		systemRouter.InitSectionRouter(PrivateGroup)
+		systemRouter.InitPostRouter(PrivateGroup)
 	}
 	return Router
 }

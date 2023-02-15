@@ -13,7 +13,7 @@ zap:
   format: json
   prefix: ""
   director: log
-  show-line: false
+  show-line: true
   encode-level: LowercaseLevelEncoder
   stacktrace-key: stacktrace
   log-in-console: true

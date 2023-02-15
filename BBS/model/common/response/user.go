@@ -1,21 +1,20 @@
 package response
 
 import (
+	"github.com/robot007num/go/bbs/model/common/internal"
 	"reflect"
 )
 
 //SQLUser 存入数据库并在登录之后返回此结构
 type SQLUser struct {
-	ID         int64  `json:"-" db:"id"`                    //主key
-	UserId     int64  `json:"user_id" db:"user_id"`         //唯一ID
-	Account    string `json:"account" db:"account" `        //登录账号
-	Password   string `json:"-" db:"password" `             //密码
-	UserName   string `json:"name" db:"username"`           //用户昵称
-	Email      string `json:"email" db:"email"`             //邮件
-	Type       int    `json:"type" db:"type"`               //用户类型 0普通 1版主 2超级
-	Enable     int    `json:"enable" db:"enable"`           //用户是否被冻结 0正常 1冻结
-	CreateTime string `json:"create_time" db:"create_time"` //创建时间
-	UpdateTime string `json:"update_time" db:"update_time"` //更新时间
+	internal.Basic
+	UserId   int64  `json:"user_id" db:"user_id"`  //唯一ID
+	Account  string `json:"account" db:"account" ` //登录账号
+	Password string `json:"-" db:"password" `      //密码
+	UserName string `json:"name" db:"username"`    //用户昵称
+	Email    string `json:"email" db:"email"`      //邮件
+	Type     int    `json:"type" db:"type"`        //用户类型 0普通 1版主 2超级
+	Enable   int    `json:"enable" db:"enable"`    //用户是否被冻结 0正常 1冻结
 }
 
 type LoginResponse struct {

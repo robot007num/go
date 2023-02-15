@@ -68,24 +68,24 @@ func (j *JWT) CreateClaims(baseClaims request.BaseClaims) (c1, c2 request.TokenC
 	c1 = request.TokenClaims{
 		BaseClaims: baseClaims,
 		RegisteredClaims: jwt.RegisteredClaims{
-			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),                // 签名生效时间
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Minute * time.Duration(bf))), // 过期时间 1小时  配置文件
-			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                        // 签名的发行者
+			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),              // 签名生效时间
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * time.Duration(bf))), // 过期时间 1小时  配置文件
+			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                      // 签名的发行者
 		},
 	}
 	c2 = request.TokenClaims{
 		BaseClaims: baseClaims,
 		RegisteredClaims: jwt.RegisteredClaims{
-			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),                 // 签名生效时间
-			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Minute * time.Duration(bf2))), // 过期时间 7小时  配置文件
-			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                         // 签名的发行者
+			NotBefore: jwt.NewNumericDate(time.Now().Add(time.Duration(1))),               // 签名生效时间
+			ExpiresAt: jwt.NewNumericDate(time.Now().Add(time.Hour * time.Duration(bf2))), // 过期时间 7小时  配置文件
+			Issuer:    global.GVA_CONFIG.JWT.Issuer,                                       // 签名的发行者
 		},
 	}
 
 	return c1, c2
 }
 
-// 创建一个token
+//CreateToken  创建一个token
 func (j *JWT) CreateToken(claims request.TokenClaims) (string, error) {
 	return jwt.NewWithClaims(jwt.SigningMethodHS256, claims).SignedString(j.SigningKey)
 }
